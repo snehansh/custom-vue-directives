@@ -11,6 +11,13 @@ const routes: Array<RouteConfig> = [
     component: Home,
   },
   {
+    path: "/directive",
+    name: "directive",
+    // component: Directive,
+    component: () =>
+      import(/* webpackChunkName: "directive" */ "../views/Directive.vue"),
+  },
+  {
     path: "/about",
     name: "About",
     // route level code-splitting
